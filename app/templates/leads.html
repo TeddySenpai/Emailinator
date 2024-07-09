@@ -1,0 +1,14 @@
+<!-- leads.html -->
+
+{% extends "base.html" %}
+
+{% block title %}Leads - STs Emailinator{% endblock %}
+
+{% block content %}
+<h1>Leads</h1>
+<ul>
+    {% for lead in leads %}
+    <li>{{ lead.name }} - {{ lead.email }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

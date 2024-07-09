@@ -1,0 +1,28 @@
+<!-- base.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}STs Emailinator{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/scripts.js') }}" defer></script>
+</head>
+<body>
+    <nav>
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="STs Emailinator Logo" class="logo">
+        <ul>
+            <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+            <li><a href="{{ url_for('leads') }}">Leads</a></li>
+            <li><a href="{{ url_for('email_campaigns') }}">Email Campaigns</a></li>
+            <li><a href="{{ url_for('analytics') }}">Analytics</a></li>
+            <li><a href="{{ url_for('model_training') }}">Model Training</a></li>
+            <li><a href="{{ url_for('chatbot') }}">Chatbot</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

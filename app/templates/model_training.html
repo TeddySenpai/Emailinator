@@ -1,0 +1,19 @@
+<!-- model_training.html -->
+
+{% extends "base.html" %}
+
+{% block title %}Model Training - STs Emailinator{% endblock %}
+
+{% block content %}
+<h1>Model Training</h1>
+<p>Train your machine learning models here.</p>
+<form method="POST" action="{{ url_for('model_training') }}">
+    <label for="data">Data:</label>
+    <textarea id="data" name="data" required></textarea>
+    <br>
+    <label for="labels">Labels:</label>
+    <textarea id="labels" name="labels" required></textarea>
+    <br>
+    <input type="submit" value="Train Model">
+</form>
+{% endblock %}

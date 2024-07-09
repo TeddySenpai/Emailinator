@@ -1,0 +1,10 @@
+Flask
+Flask-WTF
+Flask-SQLAlchemy
+sendgrid
+requests
+beautifulsoup4
+scikit-learn
+transformers
+pandas
+spacy

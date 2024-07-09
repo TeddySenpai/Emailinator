@@ -1,0 +1,21 @@
+<!-- email_campaigns.html -->
+
+{% extends "base.html" %}
+
+{% block title %}Email Campaigns - STs Emailinator{% endblock %}
+
+{% block content %}
+<h1>Email Campaigns</h1>
+<form method="POST" action="{{ url_for('email_campaigns') }}">
+    <label for="recipient">Recipient Email:</label>
+    <input type="email" id="recipient" name="recipient" required>
+    <br>
+    <label for="subject">Subject:</label>
+    <input type="text" id="subject" name="subject" required>
+    <br>
+    <label for="content">Content:</label>
+    <textarea id="content" name="content" required></textarea>
+    <br>
+    <input type="submit" value="Send Email">
+</form>
+{% endblock %}

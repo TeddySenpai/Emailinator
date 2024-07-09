@@ -1,0 +1,16 @@
+<!-- chatbot.html -->
+
+{% extends "base.html" %}
+
+{% block title %}Chatbot - STs Emailinator{% endblock %}
+
+{% block content %}
+<h1>Chatbot</h1>
+<p>Interact with the chatbot here.</p>
+<form method="POST" action="{{ url_for('chatbot') }}">
+    <label for="message">Your Message:</label>
+    <input type="text" id="message" name="message" required>
+    <br>
+    <input type="submit" value="Send">
+</form>
+{% endblock %}
